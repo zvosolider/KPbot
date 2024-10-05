@@ -130,7 +130,7 @@ async def get_all(message: types.Message, command: CommandObject):
 
 @dp.callback_query(F.data == 'set_8')
 async def set_8(call: CallbackQuery):
-    with open("users/" + str(call.from_user.id), "w") as file: # ЫВАХФЫВАХФЫВАХФЫВАХФЫВ Я ТАК РЖАЛ КОГДА ЭТО ПРИДУМАЛ НО МНЕ ОЧЕНЬ ЛЕНЬ ПРИДУМЫВАТЬ ЧТО-ТО С БАЗАМИ ДАННЫХ
+    with open("users/" + str(call.from_user.id), "w") as file: # ЫВАХФЫВАХФЫВАХФЫВАХФЫВ Я ТАК РЖАЛ КОГДА ЭТО ПРИДУМАЛ НО МНЕ ОЧЕНЬ ЛЕНЬ ДЕЛАТЬ ЧТО-ТО С БАЗАМИ ДАННЫХ
         file.write("8")
     await call.message.answer("✅ Ваш класс изменен на <b>восьмой</b>")
     await call.answer()
